@@ -1,0 +1,114 @@
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
+These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using 
+a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+
+Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) 
+using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals 
+(tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated 
+using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, 
+fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The subset of variables that were selected from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+
+The complete list of variables is:
+'
+ [1] "Time.Body_Acceleration-Mean()-X"                      
+ [2] "Time.Body_Acceleration-Mean()-Y"                      
+ [3] "Time.Body_Acceleration-Mean()-Z"                      
+ [4] "Time.Body_Acceleration-STD()-X"                       
+ [5] "Time.Body_Acceleration-STD()-Y"                       
+ [6] "Time.Body_Acceleration-STD()-Z"                       
+ [7] "Time.Gravity_Acceleration-Mean()-X"                   
+ [8] "Time.Gravity_Acceleration-Mean()-Y"                   
+ [9] "Time.Gravity_Acceleration-Mean()-Z"                   
+[10] "Time.Gravity_Acceleration-STD()-X"                    
+[11] "Time.Gravity_Acceleration-STD()-Y"                    
+[12] "Time.Gravity_Acceleration-STD()-Z"                    
+[13] "Time.Body_Acceleration.Jer-Mean()-X"                  
+[14] "Time.Body_Acceleration.Jer-Mean()-Y"                  
+[15] "Time.Body_Acceleration.Jer-Mean()-Z"                  
+[16] "Time.Body_Acceleration.Jer-STD()-X"                   
+[17] "Time.Body_Acceleration.Jer-STD()-Y"                   
+[18] "Time.Body_Acceleration.Jer-STD()-Z"                   
+[19] "Time.Body_Gyroscope-Mean()-X"                         
+[20] "Time.Body_Gyroscope-Mean()-Y"                         
+[21] "Time.Body_Gyroscope-Mean()-Z"                         
+[22] "Time.Body_Gyroscope-STD()-X"                          
+[23] "Time.Body_Gyroscope-STD()-Y"                          
+[24] "Time.Body_Gyroscope-STD()-Z"                          
+[25] "Time.Body_Gyroscope.Jer-Mean()-X"                     
+[26] "Time.Body_Gyroscope.Jer-Mean()-Y"                     
+[27] "Time.Body_Gyroscope.Jer-Mean()-Z"                     
+[28] "Time.Body_Gyroscope.Jer-STD()-X"                      
+[29] "Time.Body_Gyroscope.Jer-STD()-Y"                      
+[30] "Time.Body_Gyroscope.Jer-STD()-Z"                      
+[31] "Time.Body_Acceleration.Magnitude-Mean()"              
+[32] "Time.Body_Acceleration.Magnitude-STD()"               
+[33] "Time.Gravity_Acceleration.Magnitude-Mean()"           
+[34] "Time.Gravity_Acceleration.Magnitude-STD()"            
+[35] "Time.Body_Acceleration.JerkMagnitude-Mean()"          
+[36] "Time.Body_Acceleration.JerkMagnitude-STD()"           
+[37] "Time.Body_Gyroscope.Magnitude-Mean()"                 
+[38] "Time.Body_Gyroscope.Magnitude-STD()"                  
+[39] "Time.Body_Gyroscope.JerkMagnitude-Mean()"             
+[40] "Time.Body_Gyroscope.JerkMagnitude-STD()"              
+[41] "Frequency.Body_Acceleration-Mean()-X"                 
+[42] "Frequency.Body_Acceleration-Mean()-Y"                 
+[43] "Frequency.Body_Acceleration-Mean()-Z"                 
+[44] "Frequency.Body_Acceleration-STD()-X"                  
+[45] "Frequency.Body_Acceleration-STD()-Y"                  
+[46] "Frequency.Body_Acceleration-STD()-Z"                  
+[47] "Frequency.Body_Acceleration.Jer-Mean()-X"             
+[48] "Frequency.Body_Acceleration.Jer-Mean()-Y"             
+[49] "Frequency.Body_Acceleration.Jer-Mean()-Z"             
+[50] "Frequency.Body_Acceleration.Jer-STD()-X"              
+[51] "Frequency.Body_Acceleration.Jer-STD()-Y"              
+[52] "Frequency.Body_Acceleration.Jer-STD()-Z"              
+[53] "Frequency.Body_Gyroscope-Mean()-X"                    
+[54] "Frequency.Body_Gyroscope-Mean()-Y"                    
+[55] "Frequency.Body_Gyroscope-Mean()-Z"                    
+[56] "Frequency.Body_Gyroscope-STD()-X"                     
+[57] "Frequency.Body_Gyroscope-STD()-Y"                     
+[58] "Frequency.Body_Gyroscope-STD()-Z"                     
+[59] "Frequency.Body_Acceleration.Magnitude-Mean()"         
+[60] "Frequency.Body_Acceleration.Magnitude-STD()"          
+[61] "Frequency.Body_Body_Acceleration.JerkMagnitude-Mean()"
+[62] "Frequency.Body_Body_Acceleration.JerkMagnitude-STD()" 
+[63] "Frequency.Body_Body_Gyroscope.Magnitude-Mean()"       
+[64] "Frequency.Body_Body_Gyroscope.Magnitude-STD()"        
+[65] "Frequency.Body_Body_Gyroscope.JerkMagnitude-Mean()"   
+[66] "Frequency.Body_Body_Gyroscope.JerkMagnitude-STD()"    
+[67] "Activity"                                             
+[68] "Subject" 
